@@ -18,7 +18,7 @@ spec:
   template:
     metadata:
       labels:
-        app: ecsdemo-crystal
+        app: ecsdemo-crystal 
     spec:
       containers:
       - image: brentley/ecsdemo-crystal:latest

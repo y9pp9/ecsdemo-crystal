@@ -3,6 +3,15 @@ kind: Ingress
 metadata:
   name: ecsdemo-frontend
 spec:
-  backend:
-    serviceName: ecsdemo-frontend
-    servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: ecsdemo-frontend
+          servicePort: 8080
+      # NOTE: this should come after /api or else it will hijack requests
+      - path: /api
+        backend:
+          serviceName: nginx
+          servicePort: 80
