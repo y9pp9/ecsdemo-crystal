@@ -1,3 +1,4 @@
+```
 [iccadmin@centos-1 ingress]$ k get svc
 NAME               TYPE           CLUSTER-IP      EXTERNAL-IP                       PORT(S)          AGE
 kubernetes         ClusterIP      10.43.0.1       <none>                            443/TCP          11d
@@ -24,4 +25,4 @@ Events:          <none>
 
 [iccadmin@centos-1 ingress]$ k apply -f ingress.yaml 
 ingress.networking.k8s.io/name-virtual-host-ingress configured
-
+```
