@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-y9pp9-deployment
+  namespace: ingress-test
+  labels:
+    app: nginx-y9pp9
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx-y9pp9
+  template:
+    metadata:
+      labels:
+        app: nginx-y9pp9
+    spec:
+      containers:
+      - name: nginx-y9pp9
+        image: y9pp9/nginx-y9pp9:3
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-y9pp9-svc
+  namespace: ingress-test
+spec:
+  selector:
+    app: nginx-y9pp9
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30021
+  type: NodePort
