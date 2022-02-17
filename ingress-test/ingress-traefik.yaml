@@ -11,6 +11,10 @@ spec:
   - hosts:
     - y9pp9.top
     secretName: y9pp9-tls
+    - a.y9pp9.top
+    secretName: y9pp9-tls
+    - b.y9pp9.top
+    secretName: y9pp9-tls
   backend:
         serviceName: nginx-y9pp9-svc
         servicePort: 80
