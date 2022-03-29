@@ -60,10 +60,17 @@ spec:
         app: app-portainer
     spec:
       serviceAccountName: portainer-sa-clusteradmin
+      volumes:
+        - name: "data"
+          persistentVolumeClaim:
+            claimName: portainer
       containers:
       - name: portainer
         image: portainer/portainer-ce:latest
         imagePullPolicy: Always
+        volumeMounts:
+          - name: data
+            mountPath: /data   
         ports:
         - containerPort: 9000
           protocol: TCP
