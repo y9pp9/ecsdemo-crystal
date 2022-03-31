@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: helloweb
-  namespace: hello-namespace
+  namespace: hello
   labels:
     app: hello
 spec:
