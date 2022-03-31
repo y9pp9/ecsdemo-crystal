@@ -13,5 +13,5 @@ spec:
   - name: hello-loadbalancer
     port: 8029
     targetPort: 80
-    nodeport: 30081
+    #nodePort: 30081
   type: LoadBalancer
