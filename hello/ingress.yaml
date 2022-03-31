@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: hello-ingress 
-  namespace: hello-namespace
+  namespace: hello
 spec:
   rules:
   - http:
