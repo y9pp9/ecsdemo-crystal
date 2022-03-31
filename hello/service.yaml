@@ -11,7 +11,8 @@ spec:
     tier: web
   ports:
   - name: hello-nodeport
+    protocol: TCP
     port: 8029
     targetPort: 80
-    #nodePort: 30081
+    nodePort: 30041
   type: NodePort
