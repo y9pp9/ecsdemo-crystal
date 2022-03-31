@@ -12,4 +12,5 @@ spec:
   ports:
   - port: 8009
     targetPort: 8080
-  type: LoadBalancer
+    NodePort: 32901
+  type: NodePort
