@@ -10,7 +10,7 @@ spec:
     app: hello
     tier: web
   ports:
-  - port: 8029
+  - name: hello-nodeport
     targetPort: 80
-#    nodeport: 30081
+    nodePort: 30081
   type: NodePort
